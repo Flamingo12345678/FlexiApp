@@ -1,3 +1,34 @@
+/* === Animation 3D en arrière-plan sur desktop === */
+@media (min-width: 769px) {
+  .background-3d {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 1200px;
+    height: 800px;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+    pointer-events: none;
+    opacity: 0.25;
+    object-fit: contain;
+    transition: opacity 0.3s, width 0.3s, height 0.3s;
+    display: block;
+  }
+  .background-3d spline-viewer {
+    background: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    display: block;
+  }
+  body > *:not(.background-3d) {
+    position: relative;
+    z-index: 1;
+  }
+}
 /* Harmonisation du bloc paiement avec .form-content (login/register) */
 .payment-content {
   background: rgba(255, 255, 255, 0.05);
@@ -8,6 +39,37 @@
   max-width: 450px;
   margin: 0 auto;
   box-sizing: border-box;
+}
+
+/* === Animation 3D en arrière-plan sur mobile === */
+@media (max-width: 768px) {
+  .background-3d {
+    position: fixed;
+    top: 10vh;
+    left: 50%;
+    width: 95vw;
+    height: 60vh;
+    transform: translateX(-50%);
+    z-index: 0;
+    pointer-events: none;
+    opacity: 0.25;
+    object-fit: contain;
+    transition: opacity 0.3s, width 0.3s, height 0.3s;
+  }
+  .background-3d spline-viewer {
+    background: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    display: block;
+  }
+  body > *:not(.background-3d) {
+    position: relative;
+    z-index: 1;
+  }
 }
 @media (max-width: 600px) {
   .payment-content {
