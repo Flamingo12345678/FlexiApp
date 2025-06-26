@@ -1,10 +1,12 @@
 /* ===== MENU BURGER MOBILE ===== */
 @media (max-width: 600px) {
   .payment-section {
-    max-width: 98vw;
-    margin: 110px 1vw 0 1vw; /* Updated margin-top */
-    padding: 16px 4px;
+    width: 100%;
+    max-width: 400px;
+    margin: 110px auto 0 auto;
+    padding: 12px 8px;
     border-radius: 12px;
+    box-sizing: border-box;
   }
   .payment-section h2 {
     font-size: 20px;
@@ -17,7 +19,7 @@
     font-size: 13px;
     padding: 10px 10px;
   }
-}
+
   .navbar {
     display: flex;
     flex-direction: column;
