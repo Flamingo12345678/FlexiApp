@@ -31,6 +31,15 @@
     transition: opacity 0.3s, width 0.3s, height 0.3s;
     display: block;
   }
+  /* Taille du logo sur desktop */
+  .logo img,
+  .page-header .logo img {
+    max-width: 180px;
+    max-height: 64px;
+    width: auto;
+    height: auto;
+    display: block;
+  }
   .background-3d spline-viewer {
     background: transparent !important;
     box-shadow: none !important;
