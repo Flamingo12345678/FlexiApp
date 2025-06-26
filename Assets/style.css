@@ -736,6 +736,7 @@ button {
    =========================================== */
 
 /* Form Container */
+/* Correction anti-débordement mobile Register */
 .form-container {
   position: absolute;
   top: 50%;
@@ -744,6 +745,16 @@ button {
   width: 100%;
   max-width: 450px;
   z-index: 10;
+}
+@media (max-width: 600px) {
+  .form-container {
+    position: static;
+    transform: none;
+    margin: 80px auto 0 auto;
+    padding-top: 24px;
+    width: 100%;
+    max-width: 98vw;
+  }
 }
 
 .form-content {
