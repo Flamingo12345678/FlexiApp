@@ -1,161 +1,82 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Paiement - MyxRPG</title>
-    <link rel="stylesheet" href="../Assets/style.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Overpass+Mono:wght@400;500;600&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <div class="page-container pricing-page">
-      <!-- Burger Button (mobile) -->
-      <button
-        class="burger-btn"
-        id="burgerBtn"
-        aria-label="Ouvrir le menu"
-        aria-expanded="false"
-        aria-controls="mainNav"
-      >
-        <span class="burger-icon"><span></span><span></span><span></span></span>
-      </button>
-      <div class="ellipse-div"></div>
-      <header class="page-header">
-        <div class="logo">
-          <span class="logo-x">x</span>
-          <span class="logo-zone">Zone</span>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Paiement - xZone</title>
+  <link rel="stylesheet" href="../Assets/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Overpass+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="page-container pricing-page">
+    <!-- Burger Button (mobile) -->
+    <button class="burger-btn" id="burgerBtn" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mainNav">
+      <span class="burger-icon"><span></span><span></span><span></span></span>
+    </button>
+    <div class="ellipse-div"></div>
+    <header class="page-header">
+      <div class="logo">
+        <span class="logo-x">x</span>
+        <span class="logo-zone">Zone</span>
+      </div>
+      <nav class="navbar" id="mainNav">
+        <div class="nav-item">
+          <a href="../index.html">Home</a>
         </div>
-        <nav class="navbar" id="mainNav">
-          <div class="nav-item">
-            <a href="../index.html">Home</a>
-          </div>
-          <div class="nav-item">
-            <a href="../Features/index.html">Features</a>
-          </div>
-          <div class="nav-item">
-            <a href="index.html">Pricing</a>
-          </div>
-          <div class="nav-item">
-            <a href="../Contacts/index.html">Contacts</a>
-          </div>
-        </nav>
+        <div class="nav-item">
+          <a href="../Features/features.html">Features</a>
+        </div>
+        <div class="nav-item">
+          <a href="../Pricing/pricing.html">Pricing</a>
+        </div>
+        <div class="nav-item">
+          <a href="../Contacts/contacts.html">Contacts</a>
+        </div>
         <div class="login-btn">
-          <a href="../Login/index.html">Login</a>
+          <a href="../Login/login.html">Login</a>
         </div>
-      </header>
-      <main>
-        <section
-          class="payment-section"
-          style="
-            max-width: 400px;
-            margin: 80px auto 0 auto;
-            background: rgba(30, 30, 40, 0.95);
-            padding: 2.5rem 2rem;
-            border-radius: 1.5rem;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
-            z-index: 2;
-            position: relative;
-          "
-        >
-          <h2 style="text-align: center; margin-bottom: 2rem">
-            Finaliser votre achat
-          </h2>
-          <form
-            class="payment-form"
-            style="display: flex; flex-direction: column; gap: 1.2rem"
-          >
-            <label for="card-number">Numéro de carte</label>
-            <input
-              type="text"
-              id="card-number"
-              name="card-number"
-              placeholder="1234 5678 9012 3456"
-              required
-              style="
-                padding: 0.7rem 1rem;
-                border-radius: 0.7rem;
-                border: none;
-                background: #181828;
-                color: #fff;
-                font-size: 1rem;
-              "
-            />
+      </nav>
+    </header>
+    <main>
+      <section class="payment-section" style="max-width:400px;margin:80px auto 0 auto;background:rgba(30,30,40,0.95);padding:2.5rem 2rem;border-radius:1.5rem;box-shadow:0 8px 32px rgba(0,0,0,0.25);z-index:2;position:relative;">
+        <h2 style="text-align:center;margin-bottom:2rem;">Finaliser votre achat</h2>
+        <form class="payment-form" style="display:flex;flex-direction:column;gap:1.2rem;">
+          <label for="card-number">Numéro de carte</label>
+          <input type="text" id="card-number" name="card-number" placeholder="1234 5678 9012 3456" required style="padding:0.7rem 1rem;border-radius:0.7rem;border:none;background:#181828;color:#fff;font-size:1rem;">
 
-            <label for="expiry">Date d'expiration</label>
-            <input
-              type="text"
-              id="expiry"
-              name="expiry"
-              placeholder="MM/AA"
-              required
-              style="
-                padding: 0.7rem 1rem;
-                border-radius: 0.7rem;
-                border: none;
-                background: #181828;
-                color: #fff;
-                font-size: 1rem;
-              "
-            />
+          <label for="expiry">Date d'expiration</label>
+          <input type="text" id="expiry" name="expiry" placeholder="MM/AA" required style="padding:0.7rem 1rem;border-radius:0.7rem;border:none;background:#181828;color:#fff;font-size:1rem;">
 
-            <label for="cvc">CVC</label>
-            <input
-              type="text"
-              id="cvc"
-              name="cvc"
-              placeholder="123"
-              required
-              style="
-                padding: 0.7rem 1rem;
-                border-radius: 0.7rem;
-                border: none;
-                background: #181828;
-                color: #fff;
-                font-size: 1rem;
-              "
-            />
+          <label for="cvc">CVC</label>
+          <input type="text" id="cvc" name="cvc" placeholder="123" required style="padding:0.7rem 1rem;border-radius:0.7rem;border:none;background:#181828;color:#fff;font-size:1rem;">
 
-            <button
-              type="submit"
-              class="btn btn-primary btn-full"
-              style="margin-top: 1.5rem"
-            >
-              Payer
-            </button>
-          </form>
-        </section>
-      </main>
-      <footer>
-        <p style="text-align: center; margin: 2rem 0 0 0">
-          &copy; 2025 Flamingo. Tous droits réservés.
-        </p>
-      </footer>
-    </div>
+          <button type="submit" class="btn btn-primary btn-full" style="margin-top:1.5rem;">Payer</button>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <p style="text-align:center;margin:2rem 0 0 0;">&copy; 2025 Flamingo. Tous droits réservés.</p>
+    </footer>
     <script>
       // Menu burger mobile
-      const burgerBtn = document.getElementById("burgerBtn");
-      const nav = document.getElementById("mainNav");
-      burgerBtn.addEventListener("click", function () {
-        nav.classList.toggle("open");
-        burgerBtn.classList.toggle("open");
-        const expanded = burgerBtn.getAttribute("aria-expanded") === "true";
-        burgerBtn.setAttribute("aria-expanded", !expanded);
-        document.body.classList.toggle(
-          "menu-open",
-          nav.classList.contains("open")
-        );
+      const burgerBtn = document.getElementById('burgerBtn');
+      const nav = document.getElementById('mainNav');
+      burgerBtn.addEventListener('click', function() {
+        nav.classList.toggle('open');
+        burgerBtn.classList.toggle('open');
+        const expanded = burgerBtn.getAttribute('aria-expanded') === 'true';
+        burgerBtn.setAttribute('aria-expanded', !expanded);
+        document.body.classList.toggle('menu-open', nav.classList.contains('open'));
       });
-      nav.querySelectorAll("a").forEach((link) => {
-        link.addEventListener("click", () => {
-          nav.classList.remove("open");
-          burgerBtn.classList.remove("open");
-          burgerBtn.setAttribute("aria-expanded", "false");
-          document.body.classList.remove("menu-open");
+      nav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          nav.classList.remove('open');
+          burgerBtn.classList.remove('open');
+          burgerBtn.setAttribute('aria-expanded', 'false');
+          document.body.classList.remove('menu-open');
         });
       });
     </script>
-  </body>
+  </div>
+</body>
 </html>
