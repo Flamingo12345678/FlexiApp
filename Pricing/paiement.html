@@ -38,21 +38,29 @@
       </nav>
     </header>
     <main>
-      <section class="payment-section" style="max-width:400px;margin:80px auto 0 auto;background:rgba(30,30,40,0.95);padding:2.5rem 2rem;border-radius:1.5rem;box-shadow:0 8px 32px rgba(0,0,0,0.25);z-index:2;position:relative;">
-        <h2 style="text-align:center;margin-bottom:2rem;">Finaliser votre achat</h2>
-        <form class="payment-form" style="display:flex;flex-direction:column;gap:1.2rem;">
-          <label for="card-number">Numéro de carte</label>
-          <input type="text" id="card-number" name="card-number" placeholder="1234 5678 9012 3456" required style="padding:0.7rem 1rem;border-radius:0.7rem;border:none;background:#181828;color:#fff;font-size:1rem;">
-
-          <label for="expiry">Date d'expiration</label>
-          <input type="text" id="expiry" name="expiry" placeholder="MM/AA" required style="padding:0.7rem 1rem;border-radius:0.7rem;border:none;background:#181828;color:#fff;font-size:1rem;">
-
-          <label for="cvc">CVC</label>
-          <input type="text" id="cvc" name="cvc" placeholder="123" required style="padding:0.7rem 1rem;border-radius:0.7rem;border:none;background:#181828;color:#fff;font-size:1rem;">
-
-          <button type="submit" class="btn btn-primary btn-full" style="margin-top:1.5rem;">Payer</button>
-        </form>
-      </section>
+      <div class="form-container">
+        <div class="form-content">
+          <h2 class="form-title">Finaliser votre achat</h2>
+          <p class="form-subtitle">Veuillez renseigner vos informations de paiement.</p>
+          <form class="payment-form">
+            <div class="input-group">
+              <label for="card-number">Numéro de carte</label>
+              <input type="text" id="card-number" name="card-number" placeholder="1234 5678 9012 3456" required>
+            </div>
+            <div class="input-row">
+              <div class="input-group">
+                <label for="expiry">Date d'expiration</label>
+                <input type="text" id="expiry" name="expiry" placeholder="MM/AA" required>
+              </div>
+              <div class="input-group">
+                <label for="cvc">CVC</label>
+                <input type="text" id="cvc" name="cvc" placeholder="123" required>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full" style="margin-top:12px;">Payer</button>
+          </form>
+        </div>
+      </div>
     </main>
     <footer>
       <p style="text-align:center;margin:2rem 0 0 0;">&copy; 2025 Flamingo. Tous droits réservés.</p>

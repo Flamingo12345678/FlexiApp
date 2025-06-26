@@ -1,10 +1,28 @@
+/* Harmonisation du bloc paiement avec .form-content (login/register) */
+.payment-content {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 40px;
+  backdrop-filter: blur(20px);
+  max-width: 450px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+@media (max-width: 600px) {
+  .payment-content {
+    padding: 16px 4px;
+    max-width: 98vw;
+  }
+}
 /* ===== MENU BURGER MOBILE ===== */
 @media (max-width: 600px) {
   .payment-section {
+    position: static;
     width: 100%;
-    max-width: 400px;
+    max-width: 98vw;
     margin: 110px auto 0 auto;
-    padding: 12px 8px;
+    padding: 0 4px;
     border-radius: 12px;
     box-sizing: border-box;
   }
