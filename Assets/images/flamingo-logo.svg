@@ -3,12 +3,26 @@
 
   <!-- Flamant stylisé (vectoriel simplifié) -->
   <g transform="translate(40,30) scale(1.2)">
-    <path d="M30 10 C 45 0, 65 10, 50 30 C 45 35, 55 40, 60 45 C 55 50, 50 50, 45 45 C 40 40, 35 35, 30 30 C 25 25, 25 15, 30 10 Z"
-          fill="#9D4EDD" />
-    <circle cx="30" cy="10" r="3" fill="#9D4EDD" />
-    <line x1="45" y1="50" x2="45" y2="70" stroke="#9D4EDD" stroke-width="3" />
-    <line x1="45" y1="70" x2="40" y2="90" stroke="#9D4EDD" stroke-width="3" />
-    <line x1="45" y1="70" x2="50" y2="90" stroke="#9D4EDD" stroke-width="3" />
+    <!-- Corps principal (ovale plus marqué) -->
+    <ellipse cx="45" cy="35" rx="22" ry="15" fill="#9D4EDD"/>
+    <!-- Aile (plus visible) -->
+    <path d="M55 35 Q65 30, 60 45 Q55 50, 50 45 Q53 40, 55 35 Z" fill="#B983FF"/>
+    <!-- Cou (plus long et recourbé) -->
+    <path d="M60 40 Q80 10, 60 5 Q45 0, 45 15 Q45 25, 60 40" fill="none" stroke="#9D4EDD" stroke-width="6" stroke-linecap="round"/>
+    <!-- Tête (ronde, détachée du corps) -->
+    <circle cx="60" cy="5" r="9" fill="#9D4EDD" />
+    <!-- Oeil (plus grand, positionné) -->
+    <ellipse cx="63" cy="3" rx="1.7" ry="1.2" fill="#fff"/>
+    <ellipse cx="63.5" cy="3" rx="0.6" ry="0.4" fill="#222"/>
+    <!-- Bec (plus long, recourbé) -->
+    <path d="M69 7 Q75 10, 68 13 Q66 12, 67 9 Q68 7, 69 7 Z" fill="#FBB13C" stroke="#222" stroke-width="0.8"/>
+    <path d="M69 7 Q77 13, 68 13" fill="none" stroke="#222" stroke-width="1"/>
+    <!-- Jambes (plus longues, une pliée) -->
+    <line x1="55" y1="50" x2="55" y2="80" stroke="#9D4EDD" stroke-width="3"/>
+    <line x1="55" y1="80" x2="52" y2="95" stroke="#9D4EDD" stroke-width="3"/>
+    <line x1="55" y1="80" x2="58" y2="95" stroke="#9D4EDD" stroke-width="3"/>
+    <!-- Patte arrière repliée -->
+    <path d="M48 55 Q43 65, 54 80" fill="none" stroke="#9D4EDD" stroke-width="2"/>
   </g>
 
   <!-- Texte FLAMINGO -->
