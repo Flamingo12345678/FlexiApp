@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>xZone - Features</title>
+    <link rel="stylesheet" href="../Assets/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Overpass+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Features Page -->
+    <div class="page-container features-page">
+      <!-- Burger Button (mobile) -->
+      <button
+        class="burger-btn"
+        id="burgerBtn"
+        aria-label="Ouvrir le menu"
+        aria-expanded="false"
+        aria-controls="mainNav"
+      >
+        <span class="burger-icon"><span></span><span></span><span></span></span>
+      </button>
+      <!-- Background Ellipse -->
+      <div class="ellipse-div"></div>
+
+      <!-- Header -->
+      <header class="page-header">
+        <!-- Logo -->
+        <div class="logo">
+          <span class="logo-x">x</span>
+          <span class="logo-zone">Zone</span>
+        </div>
+
+        <!-- Navigation -->
+        <nav class="navbar" id="mainNav">
+          <div class="nav-item">
+            <a href="../index.html">Home</a>
+          </div>
+          <div class="nav-item active">
+            <a href="index.html">Features</a>
+          </div>
+          <div class="nav-item">
+            <a href="../Pricing/index.html">Pricing</a>
+          </div>
+          <div class="nav-item">
+            <a href="../Contacts/index.html">Contacts</a>
+          </div>
+        </nav>
+
+        <!-- Login Button -->
+        <div class="login-btn">
+          <a href="../Login/index.html">Login</a>
+        </div>
+      </header>
+
+      <!-- Hero Section -->
+      <section class="features-hero">
+        <div class="hero-content">
+          <h1 class="hero-title">
+            <span class="powerful">Powerful</span>
+            <span class="features-text">Features</span>
+          </h1>
+          <p class="hero-description">
+            Discover the innovative tools and capabilities that make xZone the
+            perfect platform for your digital journey.
+          </p>
+        </div>
+      </section>
+
+      <!-- Features Grid -->
+      <section class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <img
+              src="../Assets/images/feature-icon1.svg"
+              alt="Advanced Security"
+            />
+          </div>
+          <h3 class="feature-title">Advanced Security</h3>
+          <p class="feature-description">
+            State-of-the-art encryption and security protocols to keep your data
+            safe and secure at all times.
+          </p>
+          <div class="feature-stats">
+            <span class="stat-item">99.9% Uptime</span>
+            <span class="stat-item">256-bit Encryption</span>
+          </div>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <img
+              src="../Assets/images/feature-icon2.svg"
+              alt="Real-time Analytics"
+            />
+          </div>
+          <h3 class="feature-title">Real-time Analytics</h3>
+          <p class="feature-description">
+            Get instant insights and detailed analytics to make informed
+            decisions and optimize your performance.
+          </p>
+          <div class="feature-stats">
+            <span class="stat-item">Live Dashboard</span>
+            <span class="stat-item">Custom Reports</span>
+          </div>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <img
+              src="../Assets/images/feature-icon3.svg"
+              alt="Seamless Integration"
+            />
+          </div>
+          <h3 class="feature-title">Seamless Integration</h3>
+          <p class="feature-description">
+            Connect with your favorite tools and platforms effortlessly with our
+            comprehensive API ecosystem.
+          </p>
+          <div class="feature-stats">
+            <span class="stat-item">50+ Integrations</span>
+            <span class="stat-item">REST API</span>
+          </div>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <img src="../Assets/images/feature-icon4.svg" alt="24/7 Support" />
+          </div>
+          <h3 class="feature-title">24/7 Support</h3>
+          <p class="feature-description">
+            Our dedicated support team is always here to help you succeed with
+            round-the-clock assistance.
+          </p>
+          <div class="feature-stats">
+            <span class="stat-item">Live Chat</span>
+            <span class="stat-item">Expert Team</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section class="features-cta">
+        <div class="cta-content">
+          <h2 class="cta-title">Ready to experience the future?</h2>
+          <p class="cta-description">
+            Join thousands of users who have already transformed their workflow
+            with xZone.
+          </p>
+          <div class="cta-buttons">
+            <a href="../Login/Register/index.html" class="btn btn-primary"
+              >Get Started Free</a
+            >
+            <a href="../Pricing/index.html" class="btn btn-secondary"
+              >View Pricing</a
+            >
+          </div>
+        </div>
+      </section>
+      <script>
+        // Menu burger mobile
+        const burgerBtn = document.getElementById("burgerBtn");
+        const nav = document.getElementById("mainNav");
+        burgerBtn.addEventListener("click", function () {
+          nav.classList.toggle("open");
+          burgerBtn.classList.toggle("open");
+          const expanded = burgerBtn.getAttribute("aria-expanded") === "true";
+          burgerBtn.setAttribute("aria-expanded", !expanded);
+          document.body.classList.toggle(
+            "menu-open",
+            nav.classList.contains("open")
+          );
+        });
+        nav.querySelectorAll("a").forEach((link) => {
+          link.addEventListener("click", () => {
+            nav.classList.remove("open");
+            burgerBtn.classList.remove("open");
+            burgerBtn.setAttribute("aria-expanded", "false");
+            document.body.classList.remove("menu-open");
+          });
+        });
+      </script>
+    </div>
+  </body>
+</html>

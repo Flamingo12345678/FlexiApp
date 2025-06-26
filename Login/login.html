@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>xZone - Login</title>
+    <link rel="stylesheet" href="../Assets/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Overpass+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Login Page -->
+    <div class="page-container login-page">
+        <!-- Background Ellipse -->
+        <div class="background-ellipse"></div>
+        
+        <!-- Logo -->
+        <div class="logo">
+            <span class="logo-x">x</span>
+            <span class="logo-zone">Zone</span>
+        </div>
+        
+        <!-- Back to Home -->
+        <div class="back-home">
+            <a href="../index.html">← Back to Home</a>
+        </div>
+        
+        <!-- Login Form Container -->
+        <div class="form-container">
+            <div class="form-content">
+                <h1 class="form-title">Welcome Back</h1>
+                <p class="form-subtitle">Login to your account</p>
+                
+                <form class="login-form">
+                    <div class="input-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                    </div>
+                    
+                    <div class="form-options">
+                        <div class="remember-me">
+                            <input type="checkbox" id="remember" name="remember">
+                            <label for="remember">Remember me</label>
+                        </div>
+                        <a href="Forgot Password/index.html" class="forgot-link">Forgot password?</a>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary btn-full">Login</button>
+                </form>
+                
+                <div class="form-footer">
+                    <p>Don't have an account? <a href="Register/index.html" class="register-link">Register</a></p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Decorative Element -->
+        <div class="decorative-element"></div>
+    </div>
+</body>
+</html>

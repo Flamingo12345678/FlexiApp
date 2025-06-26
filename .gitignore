@@ -1,0 +1,30 @@
+[build/]
+[dist/]
+
+# Dossiers de build et temporaires
+build/
+dist/
+
+# Fichiers système
+.DS_Store
+Thumbs.db
+
+# Fichiers de logs
+*.log
+
+# Fichiers de configuration d'éditeur
+.vscode/
+.idea/
+.anima/
+
+# Dépendances Node.js (si jamais tu ajoutes du JS)
+node_modules/
+
+# Fichiers générés par CMake (si jamais tu ajoutes du C++)
+CMakeFiles/
+CMakeCache.txt
+cmake-build-*/
+
+# Autres fichiers temporaires
+*.tmp
+*.swp

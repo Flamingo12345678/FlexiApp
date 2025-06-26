@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>xZone - Step into the future</title>
+    <link rel="stylesheet" href="Assets/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Overpass+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Home Page -->
+    <div class="page-container home-page">
+      <!-- Header -->
+      <header class="page-header">
+        <!-- Login Button (toujours visible sur desktop/tablette) -->
+        <div class="login-btn">
+          <a href="Login/index.html">Login</a>
+        </div>
+        <!-- Logo -->
+        <div class="logo">
+          <span class="logo-x">x</span>
+          <span class="logo-zone">Zone</span>
+        </div>
+        <!-- Burger Button (mobile) -->
+        <button
+          class="burger-btn"
+          id="burgerBtn"
+          aria-label="Ouvrir le menu"
+          aria-expanded="false"
+          aria-controls="mainNav"
+        >
+          <span class="burger-icon"
+            ><span></span><span></span><span></span
+          ></span>
+        </button>
+        <!-- Navigation -->
+        <nav class="navbar" id="mainNav">
+          <div class="nav-item active">
+            <a href="index.html">Home</a>
+          </div>
+          <div class="nav-item">
+            <a href="Features/index.html">Features</a>
+          </div>
+          <div class="nav-item">
+            <a href="Pricing/index.html">Pricing</a>
+          </div>
+          <div class="nav-item">
+            <a href="Contacts/index.html">Contacts</a>
+          </div>
+          <div class="login-btn">
+            <a href="Login/index.html">Login</a>
+          </div>
+        </nav>
+      </header>
+
+      <!-- Main Content -->
+      <div class="main-content">
+        <!-- Badge -->
+        <div class="badge">🥳 100K Users in 1 month</div>
+
+        <!-- Hero Text -->
+        <div class="hero-section">
+          <h1 class="hero-title">
+            <span class="step-into">Step into the</span>
+            <span class="future">
+              <span class="f">f</span><span class="u1">u</span
+              ><span class="t">t</span><span class="u2">u</span
+              ><span class="re">re</span>
+            </span>
+          </h1>
+          <p class="hero-description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+        </div>
+
+        <!-- CTA Buttons -->
+        <div class="cta-buttons">
+          <a href="Login/Register/index.html" class="btn btn-primary"
+            >Get Started</a
+          >
+          <a href="Pricing/index.html" class="btn btn-secondary">Our Pricing</a>
+        </div>
+
+        <!-- User Stats -->
+        <div class="user-stats-inline">
+          <div class="stats-content">
+            <div class="stats-number">500K</div>
+            <div class="stats-text">worldwide users</div>
+            <div class="user-images">
+              <div class="user-avatar">
+                <img src="Assets/images/user1.jpg" alt="User 1" />
+              </div>
+              <div class="user-avatar">
+                <img src="Assets/images/user2.jpg" alt="User 2" />
+              </div>
+              <div class="user-avatar">
+                <img src="Assets/images/user3.jpg" alt="User 3" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3D UX Element Placeholder -->
+      <div class="ux-3d-element">
+        <script
+          type="module"
+          src="https://unpkg.com/@splinetool/viewer@1.10.14/build/spline-viewer.js"
+        ></script>
+        <spline-viewer
+          url="https://prod.spline.design/kRGBlcVLoUadJQQ4/scene.splinecode"
+        ></spline-viewer>
+      </div>
+      <script>
+        // Menu burger mobile
+        const burgerBtn = document.getElementById("burgerBtn");
+        const nav = document.getElementById("mainNav");
+        burgerBtn.addEventListener("click", function () {
+          nav.classList.toggle("open");
+          burgerBtn.classList.toggle("open");
+          const expanded = burgerBtn.getAttribute("aria-expanded") === "true";
+          burgerBtn.setAttribute("aria-expanded", !expanded);
+          document.body.classList.toggle(
+            "menu-open",
+            nav.classList.contains("open")
+          );
+        });
+        // Ferme le menu au clic sur un lien
+        nav.querySelectorAll("a").forEach((link) => {
+          link.addEventListener("click", () => {
+            nav.classList.remove("open");
+            burgerBtn.classList.remove("open");
+            burgerBtn.setAttribute("aria-expanded", "false");
+            document.body.classList.remove("menu-open");
+          });
+        });
+      </script>
+    </div>
+  </body>
+</html>
